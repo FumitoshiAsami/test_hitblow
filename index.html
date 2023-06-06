@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+
+    <link rel="stylesheet" href="./Assets/style/base.css">
+    <link rel="stylesheet" href="./Assets/style/game.css">
+
+    <title>Hit&Blow</title>
+</head>
+<body>
+    <!-- ローディング -->
+    <div id="loading"><img src="./Assets/img/loader.gif"></div>
+
+    <!-- ベース -->
+    <div class="base">
+        <!-- タイトル -->
+        <div id="ttl" class="">
+
+            <div class="logo">
+                <img src="./Assets/img/logo.png">
+            </div>
+
+            <div class="start-btn" id="start-btn">スタート</div>
+
+            <div class="help" id="help">
+                <p>遊び方</p>
+                <span>
+                    ①あいうえおかきくけこさしすせそたちつてとなにぬねの
+                    ここに書くswiper.js
+                </span>
+            </div>
+
+            <div class="func">
+                <div class="func-btn" id="help-btn">i</div>
+            </div>
+
+        </div>
+
+        <!-- メイン -->
+        <div id="main" class="passive">
+
+            <div id="att"></div>
+            <div id="win" onclick="window.location.reload();"></div>
+            <div id="lose" onclick="window.location.reload();"></div>
+
+            <div class="Num">
+                <div class="playernum">
+                    <div class="who">
+                        <div class="icon"><img src="./Assets/img/player-ico.png"></div>
+                        <span>Player</span>
+                    </div>
+     
+                    <div class="num" id="player-num">なし</div>
+                </div>
+                <div class="comnum">
+                    <div class="who">
+                        <div class="icon"><img src="./Assets/img/com-ico.png"></div>  
+                        <span>Computer</span>
+                    </div>
+                    <div class="num" id="com-num">???</div>
+                </div>
+            </div>
+
+
+            <div class="Table">
+                <div class="playertable">
+                    <table id="player-table">
+                            <tr>
+                                <th>予想</th>
+                                <th>H B</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                    </table>
+                </div>
+
+                <div class="comtable">
+                        <table id="com-table">
+                                <tr>
+                                    <th>予想</th>
+                                    <th>H B</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                        </table>
+                    </div>
+            </div>
+
+
+            <div class="msg" id="msg"></div>
+            
+
+
+            <div class="keypad">
+                <div class="numview-base">
+                    <div class="num-view" id="numview"></div>  
+                </div>
+                <div class="num-keys">
+                    <div class="key" id="key">0</div>
+                    <div class="key" id="key">1</div>
+                    <div class="key" id="key">2</div>
+                    <div class="key" id="key">3</div>
+                    <div class="key" id="key">4</div>
+                </div>
+                <div class="num-keys">
+                    <div class="key" id="key">5</div>
+                    <div class="key" id="key">6</div>
+                    <div class="key" id="key">7</div>
+                    <div class="key" id="key">8</div>
+                    <div class="key" id="key">9</div>
+                </div>
+                <div class="func-keys">
+                    <div class="clr" id ="clr-btn">CLR</div>
+                    <div class="ok" id ="ok-btn">OK</div>
+                    <div class="bs" id ="bs-btn">BS</div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script src="./Assets/js/jquery-3.6.2.min.js"></script>
+    <script src="./Assets/js/base.js"></script>
+    <script src="./Assets/js/event.js"></script>
+    <script src="./Assets/js/game.js"></script>
+
+
+    <script>
+
+    setTimeout(function(){$('#loading').addClass('loaded');},1000);
+    
+    </script>
+    
+</body>
+</html>

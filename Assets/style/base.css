@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'font';
+	src: url(../style/fonts/rounded-mplus-1p-bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+body{
+    background-color: #000;
+    font-family: 'font';
+}
+
+/* ベース */
+.base{
+    width: 400px;
+    height: 800px;
+    transform-origin:  0 0;
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+}
